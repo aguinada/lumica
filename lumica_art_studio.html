@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LUMICA ART STUDIO — IA + Talento Humano</title>
+  <meta name="description" content="Comunicación digital que combina inteligencia artificial y creatividad humana para entregar campañas rápidas, seguras y culturalmente relevantes." />
+  <meta name="theme-color" content="#0F172A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;         /* fondo principal */
+      --bg-soft:#0f172a;    /* fondo tarjetas */
+      --fg:#e5e7eb;         /* texto */
+      --muted:#9aa3b2;      /* texto secundario */
+      --brand:#7c3aed;      /* acento */
+      --brand-2:#22d3ee;    /* acento secundario */
+      --ok:#10b981;         /* verde */
+      --warn:#f59e0b;       /* ámbar */
+      --danger:#ef4444;     /* rojo */
+      --ring: 0 0 0 3px rgba(124, 58, 237, .35);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --grid: minmax(0, 1200px);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--fg); background:radial-gradient(1200px 600px at 75% -10%, rgba(34,211,238,.15), transparent 60%), radial-gradient(1000px 400px at 10% -20%, rgba(124,58,237,.18), transparent 60%), var(--bg);
+      line-height:1.6; letter-spacing:.2px;
+    }
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    .container{max-width:var(--grid); margin-inline:auto; padding:0 20px}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.15rem; border-radius:12px; font-weight:600; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#0b1020; box-shadow:var(--shadow); border:none}
+    .btn:hover{filter:brightness(1.05)}
+    .btn.secondary{background:transparent; color:var(--fg); border:1px solid rgba(229,231,235,.18)}
+    .tag{display:inline-block; padding:.25rem .6rem; border:1px solid rgba(229,231,235,.2); border-radius:999px; font-size:.8rem; color:var(--muted)}
+    .section{padding:72px 0}
+    .section h2{font-size:2rem; line-height:1.2; margin:0 0 14px}
+    .section p.lead{color:var(--muted); max-width:820px}
+    .grid{display:grid; gap:22px}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width: 960px){
+      .grid.cols-2, .grid.cols-3, .grid.cols-4{grid-template-columns:1fr}
+    }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .kpi{font-size:2rem; font-weight:700}
+    header.hero{
+      padding:110px 0 80px; position:relative; overflow:hidden; isolation:isolate;
+      background: radial-gradient(1200px 600px at 90% -10%, rgba(124,58,237,.25), transparent 60%), radial-gradient(900px 500px at 5% -10%, rgba(34,211,238,.20), transparent 60%);
+    }
+    header .title{font-size: clamp(2rem, 5vw, 3.2rem); line-height:1.1; margin:0 0 16px; letter-spacing:.1px}
+    header .subtitle{color:var(--muted); max-width:760px}
+    header .cta{margin-top:26px; display:flex; gap:12px; flex-wrap:wrap}
+    /* proceso */
+    .step{display:flex; gap:14px}
+    .step .num{flex:0 0 auto; width:36px; height:36px; border-radius:10px; display:grid; place-items:center; font-weight:700; background:rgba(124,58,237,.2); color:#fff; border:1px solid rgba(124,58,237,.4)}
+    .step h3{margin:0 0 6px; font-size:1.05rem}
+    .muted{color:var(--muted)}
+    /* listado tarjetas */
+    .list-card{display:flex; gap:12px; align-items:flex-start}
+    .list-card i{width:28px; height:28px; border-radius:8px; display:grid; place-items:center; background:rgba(124,58,237,.18); border:1px solid rgba(124,58,237,.35)}
+    /* footer */
+    footer{padding:48px 0; border-top:1px solid rgba(255,255,255,.12); background:rgba(2,6,23,.4)}
+    .pill{display:inline-block; padding:.35rem .7rem; border-radius:999px; font-size:.75rem; background:rgba(34,211,238,.15); color:#cffafe; border:1px solid rgba(34,211,238,.35)}
+    /* secciones diferenciadas */
+    .alt{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02))}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LUMICA ART STUDIO",
+    "url": "https://lumica.example",
+    "logo": "https://lumica.example/logo.png",
+    "sameAs": [],
+    "description": "Estudio creativo que combina IA y talento humano para campañas digitales rápidas, seguras y culturalmente relevantes.",
+    "foundingDate": "2025-01-01"
+  }
+  </script>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <span class="tag">IA + Talento Humano</span>
+      <h1 class="title">Comunicación digital que combina inteligencia artificial y creatividad humana</h1>
+      <p class="subtitle">Impulsa tu marca con campañas rápidas, seguras y culturalmente relevantes. Diseñamos, producimos y optimizamos contenido para lograr resultados reales y medibles.</p>
+      <div class="cta">
+        <a class="btn" href="#contacto" aria-label="Solicitar demo">Solicita tu demo personalizada</a>
+        <a class="btn secondary" href="#como" aria-label="Cómo trabajamos">Conoce cómo trabajamos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- QUIÉNES SOMOS / FILOSOFÍA -->
+  <section id="somos" class="section alt">
+    <div class="container">
+      <div class="grid cols-2">
+        <div>
+          <h2>Quiénes somos</h2>
+          <p class="lead">Unimos la velocidad y precisión de la IA con la sensibilidad, intuición y experiencia del talento humano. Generamos miles de ideas y las refinamos con criterio cultural y estratégico para cada mercado.</p>
+        </div>
+        <div>
+          <h2>Nuestra filosofía</h2>
+          <p class="lead">La tecnología no reemplaza la creatividad: la multiplica. Nuestro modelo híbrido asegura mensajes con alma, coherencia y propósito, combinando lo mejor de la máquina y del ser humano.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section id="como" class="section">
+    <div class="container">
+      <h2>Cómo trabajamos</h2>
+      <p class="lead">Proceso integral orientado a resultados: ideamos, refinamos, producimos, medimos y escalamos.</p>
+      <div class="grid cols-2">
+        <div class="card step"><span class="num">1</span><div><h3>Generación con IA</h3><p class="muted">Exploramos miles de propuestas en segundos para abrir el terreno creativo.</p></div></div>
+        <div class="card step"><span class="num">2</span><div><h3>Curaduría humana</h3><p class="muted">Seleccionamos y perfeccionamos con sensibilidad estética y estratégica.</p></div></div>
+        <div class="card step"><span class="num">3</span><div><h3>Campañas completas</h3><p class="muted">Imágenes, videos, anuncios y catálogos coherentes con tu identidad.</p></div></div>
+        <div class="card step"><span class="num">4</span><div><h3>Medición y optimización</h3><p class="muted">Analizamos rendimiento en tiempo real y ajustamos para maximizar impacto.</p></div></div>
+        <div class="card step"><span class="num">5</span><div><h3>Escalabilidad global</h3><p class="muted">Adaptamos a nuevos idiomas, culturas y plataformas sin perder consistencia.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="section alt">
+    <div class="container">
+      <h2>Beneficios para tu marca</h2>
+      <p class="lead">Valor tangible en tiempo, costo, calidad y crecimiento.</p>
+      <div class="grid cols-3">
+        <div class="card list-card"><i>⚡</i><div><h3>Rapidez</h3><p class="muted">Entregas en días, no semanas, para reaccionar a oportunidades y tendencias.</p></div></div>
+        <div class="card list-card"><i>📈</i><div><h3>Eficiencia</h3><p class="muted">Más piezas con el mismo presupuesto mediante flujos escalables.</p></div></div>
+        <div class="card list-card"><i>🎯</i><div><h3>Calidad constante</h3><p class="muted">Curaduría profesional que asegura coherencia y alineamiento a tu marca.</p></div></div>
+        <div class="card list-card"><i>🌍</i><div><h3>Escalabilidad internacional</h3><p class="muted">Mensajes localizados por idioma y cultura para abrir nuevos mercados.</p></div></div>
+        <div class="card list-card"><i>🔒</i><div><h3>Seguridad</h3><p class="muted">Cumplimiento de licencias y protección de datos en todo el proceso.</p></div></div>
+        <div class="card list-card"><i>🧭</i><div><h3>Estrategia</h3><p class="muted">Cada entrega responde a objetivos de negocio e impacta métricas clave.</p></div></div>
+      </div>
+      <div style="margin-top:18px"><a class="btn" href="#contacto">Quiero estos beneficios</a></div>
+    </div>
+  </section>
+
+  <!-- QUÉ HACEMOS -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <h2>Qué hacemos</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Diseño y producción</h3><p class="muted">Imágenes, videos, animaciones, presentaciones y catálogos listos para uso profesional.</p></div>
+        <div class="card"><h3>Contenido multicanal</h3><p class="muted">Optimizado para redes sociales, web, e‑commerce y campañas de pago.</p></div>
+        <div class="card"><h3>Soluciones a medida</h3><p class="muted">Integración de IA y estrategia para necesidades específicas de tu negocio.</p></div>
+        <div class="card"><h3>Desarrollo de software</h3><p class="muted">Automatización, integraciones, analítica y APIs para escalar tu comunicación.</p></div>
+        <div class="card"><h3>Branding y localización</h3><p class="muted">Identidad coherente y sensible a cada mercado e idioma.</p></div>
+        <div class="card"><h3>Operación continua</h3><p class="muted">Sistemas y plantillas para mantener consistencia a largo plazo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EJEMPLOS PRÁCTICOS -->
+  <section id="ejemplos" class="section alt">
+    <div class="container">
+      <h2>Ejemplos prácticos</h2>
+      <div class="grid cols-2">
+        <div class="card"><h3>Tienda en línea</h3><p class="muted">Expansión internacional con catálogos, fotos y textos adaptados; sincronización con redes para publicar y anunciar automáticamente.</p></div>
+        <div class="card"><h3>Lanzamientos de productos</h3><p class="muted">Paquetes integrales: videos, banners, landing, anuncios (Google/Meta) listos para publicar y medir.</p></div>
+        <div class="card"><h3>Branding global</h3><p class="muted">Ajuste de identidad y mensajes con sensibilidad cultural, manteniendo la esencia de la marca.</p></div>
+        <div class="card"><h3>Videos rápidos</h3><p class="muted">Producción de piezas cortas para TikTok, Reels y YouTube en menos de una semana.</p></div>
+        <div class="card"><h3>Apoyo a agencias</h3><p class="muted">Capacidad extra para entregar más campañas sin aumentar estructura interna.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN ES -->
+  <section id="audiencias" class="section">
+    <div class="container">
+      <h2>LUMICA en acción</h2>
+      <div class="grid cols-4">
+        <div class="card"><h3>Startups</h3><p class="muted">Crecimiento rápido con identidad sólida y pruebas iterativas.</p></div>
+        <div class="card"><h3>Emprendedores</h3><p class="muted">Alta visibilidad con recursos eficientes y enfoque en resultados.</p></div>
+        <div class="card"><h3>Pequeños negocios</h3><p class="muted">Impulso en redes, captación de clientes y generación de ventas.</p></div>
+        <div class="card"><h3>Empresas consolidadas</h3><p class="muted">Modernización de comunicación y apertura de nuevos mercados.</p></div>
+        <div class="card"><h3>Agencias de marketing</h3><p class="muted">Producción adicional bajo demanda y continuidad de marca.</p></div>
+        <div class="card"><h3>Consultores y freelancers</h3><p class="muted">Entrega de materiales profesionales con rapidez y bajo costo.</p></div>
+        <div class="card"><h3>Creadores de contenido</h3><p class="muted">Consistencia visual y expansión de alcance en múltiples plataformas.</p></div>
+        <div class="card"><h3>Organizaciones e instituciones</h3><p class="muted">Mensajes claros y sensibles para impacto social y educativo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL / CONTACTO -->
+  <section id="contacto" class="section alt">
+    <div class="container">
+      <div class="grid cols-2">
+        <div>
+          <h2>Haz que tu marca sea visible, recordada y valorada</h2>
+          <p class="lead">Transforma tus ideas en campañas efectivas con impacto real: más clientes, más visibilidad y mayor conexión con tus audiencias.</p>
+          <div class="cta">
+            <a class="btn" href="#form">Solicitar demo</a>
+            <a class="btn secondary" href="mailto:contacto@lumica.example">Hablar con un asesor</a>
+          </div>
+        </div>
+        <form id="form" class="card" onsubmit="event.preventDefault(); alert('Gracias, nos pondremos en contacto.');">
+          <div style="display:grid; gap:12px">
+            <div><label for="nombre" class="muted">Nombre</label><br><input id="nombre" name="nombre" required placeholder="Tu nombre" style="width:100%; padding:.8rem; border-radius:10px; background:#0b1228; color:#e5e7eb; border:1px solid rgba(255,255,255,.14)"/></div>
+            <div><label for="email" class="muted">Email</label><br><input id="email" name="email" type="email" required placeholder="tu@email.com" style="width:100%; padding:.8rem; border-radius:10px; background:#0b1228; color:#e5e7eb; border:1px solid rgba(255,255,255,.14)"/></div>
+            <div><label for="empresa" class="muted">Empresa</label><br><input id="empresa" name="empresa" placeholder="Nombre de tu empresa" style="width:100%; padding:.8rem; border-radius:10px; background:#0b1228; color:#e5e7eb; border:1px solid rgba(255,255,255,.14)"/></div>
+            <div><label for="mensaje" class="muted">Mensaje</label><br><textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesitas" style="width:100%; padding:.8rem; border-radius:10px; background:#0b1228; color:#e5e7eb; border:1px solid rgba(255,255,255,.14)"></textarea></div>
+            <div><button class="btn" type="submit">Enviar consulta</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid cols-2">
+        <div>
+          <span class="pill">LUMICA ART STUDIO</span>
+          <p class="muted">IA + Talento humano para comunicación digital con impacto real.</p>
+        </div>
+        <div style="text-align:right">
+          <a class="muted" href="#somos">Quiénes somos</a> ·
+          <a class="muted" href="#beneficios">Beneficios</a> ·
+          <a class="muted" href="#servicios">Qué hacemos</a> ·
+          <a class="muted" href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
