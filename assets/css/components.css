@@ -1,0 +1,21 @@
+
+.btn{display:inline-flex; align-items:center; gap:.6rem; padding:.8rem 1rem; border-radius:12px;
+  font-weight:600; background:linear-gradient(135deg, var(--brand), var(--brand2)); color:#0b1020; border:none}
+.btn:hover{filter:brightness(1.05)}
+.btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.18)}
+.btn.small{padding:.5rem .75rem; border-radius:10px; font-weight:600}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:var(--s5); box-shadow:var(--shadow); margin-bottom:var(--s4)}
+.tag{display:inline-block; padding:.25rem .6rem; border:1px solid rgba(229,231,235,.2); border-radius:999px; color:var(--muted); font-size:.85rem}
+.input, .select, .textarea{width:100%; padding:.85rem; border-radius:10px; background:#0b1228; color:var(--text); border:1px solid rgba(255,255,255,.14)}
+.table{width:100%; border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.08); padding:10px; text-align:left}
+.chips{display:flex; flex-wrap:wrap; gap:10px}
+.chip{display:inline-block; padding:.45rem .7rem; border:1px solid rgba(255,255,255,.18); border-radius:999px}
+.modal{position:fixed; inset:0; display:grid; place-items:center; background:rgba(0,0,0,.45)}
+.modal.hidden{display:none}
+.modal-content{background:var(--surface); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:var(--s5); width:min(520px, 92vw)}
+.status{padding:.25rem .6rem; border-radius:999px; font-size:.75rem; border:1px solid rgba(255,255,255,.2)}
+.status.approved{color:#a7f3d0; border-color:#a7f3d055}
+.status.review{color:#fde68a; border-color:#fde68a55}
+.status.changes{color:#fca5a5; border-color:#fca5a555}
